@@ -1,0 +1,264 @@
+/* Layout & Background */
+body {
+    font-family: 'Figtree', sans-serif;
+    background-color: #edf5f9;
+    min-height: 100vh;
+    display: block;
+}
+
+.main-content {
+    margin-left: 260px; /* Space for sidebar */
+    padding: 40px 48px;
+    max-width: 1200px;
+}
+
+/* Header Styles */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0e375a;
+}
+
+.page-subtitle {
+    font-size: 13px;
+    font-weight: 500;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.add-btn {
+    background-color: #0e375a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(14, 55, 90, 0.15);
+    transition: all 0.2s;
+}
+
+.add-btn:hover {
+    background-color: #134977;
+    transform: translateY(-1px);
+}
+
+/* 2 Column Grid Layout */
+.jadwal-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Calendar Styling */
+.calendar-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(180, 210, 225, 0.25);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.cal-nav-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #64748b;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.cal-nav-btn:hover {
+    background-color: #f1f5f9;
+}
+
+.cal-month-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0e375a;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    text-align: center;
+}
+
+.day-name {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.day-number {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.15s;
+}
+
+.day-number:not(.empty):hover {
+    background-color: #f1f5f9;
+    color: #0e375a;
+}
+
+/* Selected active day style */
+.day-number.active-day {
+    background-color: #0e375a;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Has service dot styling */
+.day-number.has-service {
+    background-color: #e0f2fe;
+    color: #0e375a;
+    font-weight: 700;
+}
+
+.service-dot {
+    position: absolute;
+    bottom: 4px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #0284c7;
+}
+
+/* Service Lists Cards */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.service-item-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(180, 210, 225, 0.25);
+    position: relative;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(180, 210, 225, 0.35);
+}
+
+.service-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.service-date-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.text-blue {
+    color: #3b82f6;
+}
+
+.open-icon {
+    width: 18px;
+    height: 18px;
+    color: #64748b;
+}
+
+.service-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0e375a;
+    margin-bottom: 16px;
+}
+
+.service-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.body-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.body-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+}
+
+.body-text {
+    font-size: 13px;
+    font-weight: 500;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.highlight-name {
+    font-weight: 700;
+    color: #0e375a;
+}
+
+/* Red trash delete button */
+.delete-btn {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn:hover {
+    background-color: #fef2f2;
+}
+
+.delete-btn svg {
+    width: 18px;
+    height: 18px;
+}

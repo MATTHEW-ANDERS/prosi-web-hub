@@ -1,0 +1,150 @@
+/* Global Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Figtree', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Soft, vibrant gradient resembling the user's screenshot */
+    background: radial-gradient(circle at 30% 50%, #cbeefa 0%, #daf7ff 45%, #effbff 100%);
+    overflow-x: hidden;
+}
+
+/* Container */
+.login-container {
+    width: 100%;
+    max-width: 540px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Premium Card Design */
+.login-card {
+    background: #ffffff;
+    width: 100%;
+    border-radius: 28px;
+    padding: 56px 48px;
+    box-shadow: 0 10px 30px rgba(180, 220, 235, 0.3), 
+                0 1px 8px rgba(0, 0, 0, 0.02);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 35px rgba(180, 220, 235, 0.4), 
+                0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Header Text */
+.brand-header {
+    margin-bottom: 24px;
+}
+
+.brand-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.brand-highlight {
+    color: #3b82f6; /* Premium blue for HUB */
+    font-weight: 400;
+}
+
+.brand-subtitle {
+    font-size: 14px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Member Badge */
+.badge-container {
+    margin-bottom: 28px;
+}
+
+.access-badge {
+    background-color: #f1f5f9;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* Google Login Button */
+.google-login-btn {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 24px;
+    outline: none;
+}
+
+.google-login-btn:hover {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.google-login-btn:active {
+    transform: scale(0.98);
+}
+
+.google-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.btn-text {
+    font-size: 16px;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* Divider Line */
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #f1f5f9;
+    margin-bottom: 24px;
+}
+
+/* Footer Section */
+.login-footer {
+    width: 100%;
+}
+
+.footer-note {
+    font-size: 12px;
+    font-weight: 500;
+    color: #94a3b8;
+    line-height: 1.6;
+    max-width: 280px;
+    margin: 0 auto;
+}

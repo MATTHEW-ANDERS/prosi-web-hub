@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitteens Hub - Permintaan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/permintaan.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+        <!-- Header -->
+        <header class="content-header">
+            <div class="title-box">
+                <h2 class="page-title">Permintaan Berhalangan</h2>
+                <p class="page-subtitle">Notifikasi dari tim yang berhalangan melayani.</p>
+            </div>
+            <div class="filter-tabs">
+                <button class="tab-btn active" id="tabBelum">Belum Diproses</button>
+                <button class="tab-btn" id="tabSemua">Semua</button>
+            </div>
+        </header>
+
+        <!-- Permintaan List -->
+        <section class="permintaan-list" id="permintaanList">
+
+            <!-- Card 1: Aldo Wijaya -->
+            <div class="request-card" data-status="pending">
+                <div class="request-header">
+                    <div class="request-name-row">
+                        <span class="request-name">Aldo Wijaya</span>
+                        <span class="request-note-tag">Catatan Aldo</span>
+                    </div>
+                    <p class="request-service">
+                        Pelayanan: <a href="#" class="service-link">Iman yang Tidak Goyah . Sabtu, 6 Juni 2026</a>
+                    </p>
+                </div>
+
+                <div class="request-reason-box">
+                    <span class="reason-label">ALASAN</span>
+                    <p class="reason-text">Saya sakit tidak bisa mengikuti latihan untuk pelayanan.</p>
+                </div>
+
+                <hr class="request-divider">
+
+                <div class="request-actions">
+                    <div class="select-wrapper replacement-select-wrap">
+                        <select class="replacement-select">
+                            <option value="">Nama Pengganti</option>
+                            <option value="mikha">Mikha</option>
+                            <option value="priscilla">Priscilla</option>
+                            <option value="kevin">Kevin</option>
+                        </select>
+                    </div>
+                    <button class="action-btn btn-approve">Tandai Selesai</button>
+                    <button class="action-btn btn-reject">Tolak</button>
+                </div>
+            </div>
+
+            <!-- Card 2: Jonathan Vincentius -->
+            <div class="request-card" data-status="pending">
+                <div class="request-header">
+                    <div class="request-name-row">
+                        <span class="request-name">Jonathan Vincentius</span>
+                        <span class="request-note-tag">Catatan Jonathan</span>
+                    </div>
+                    <p class="request-service">
+                        Pelayanan: <a href="#" class="service-link">Kasih Yang Memulihkan . 13 Juni 2026.</a>
+                    </p>
+                </div>
+
+                <div class="request-reason-box">
+                    <span class="reason-label">ALASAN</span>
+                    <p class="reason-text">Harus ke luar kota ada keperluan.</p>
+                </div>
+
+                <hr class="request-divider">
+
+                <div class="request-actions">
+                    <div class="select-wrapper replacement-select-wrap">
+                        <select class="replacement-select">
+                            <option value="">Nama Pengganti</option>
+                            <option value="mikha">Mikha</option>
+                            <option value="priscilla">Priscilla</option>
+                            <option value="kevin">Kevin</option>
+                        </select>
+                    </div>
+                    <button class="action-btn btn-approve">Tandai Selesai</button>
+                    <button class="action-btn btn-reject">Tolak</button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/permintaan.js"></script>
+</body>
+</html>

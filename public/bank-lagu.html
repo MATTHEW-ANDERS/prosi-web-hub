@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitteens Hub - Bank Lagu</title>
+    <!-- Google Fonts: Figtree -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/bank-lagu.css">
+</head>
+
+<body>
+    <!-- Container for injected sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Content Header -->
+        <header class="content-header">
+            <div class="title-box">
+                <h2 class="page-title">Bank Lagu</h2>
+                <p class="page-subtitle"><span id="songCount">3</span> Lagu Tersedia</p>
+            </div>
+            <button class="add-btn" id="addLaguBtn">+ Tambah Lagu</button>
+        </header>
+
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Cari Lagu atau Artist">
+            </div>
+
+            <div class="category-box">
+                <div class="select-wrapper">
+                    <select id="categorySelect" class="category-select">
+                        <option value="all">Semua Kategori</option>
+                        <option value="slow">Worship</option>
+                        <option value="upbeat">Praise</option>
+                        <option value="upbeat">KPPK</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Songs Grid Layout -->
+        <section class="songs-grid" id="songsGrid">
+            <!-- Song Card 1 -->
+            <div class="song-card" data-category="slow">
+                <div class="song-main">
+                    <div class="music-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18V5l12-2v13"></path>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="song-details">
+                        <h3 class="song-title">Goodness of God</h3>
+                        <p class="song-artist">Bethel Music</p>
+                    </div>
+                    <!-- Key Badge -->
+                    <div class="key-badge">G</div>
+                </div>
+                <button class="delete-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Song Card 2 -->
+            <div class="song-card" data-category="slow">
+                <div class="song-main">
+                    <div class="music-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18V5l12-2v13"></path>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="song-details">
+                        <h3 class="song-title">Sampai Akhir Hidupku</h3>
+                        <p class="song-artist">JPCC</p>
+                    </div>
+                    <!-- Key Badge -->
+                    <div class="key-badge">E</div>
+                </div>
+                <button class="delete-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Song Card 3 -->
+            <div class="song-card" data-category="slow">
+                <div class="song-main">
+                    <div class="music-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18V5l12-2v13"></path>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="song-details">
+                        <h3 class="song-title">Trust In God</h3>
+                        <p class="song-artist">Elevation Worship</p>
+                    </div>
+                    <!-- Key Badge -->
+                    <div class="key-badge">G</div>
+                </div>
+                <button class="delete-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6"></polyline>
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="js/sidebar.js"></script>
+    <script src="js/bank-lagu.js"></script>
+</body>
+
+</html>

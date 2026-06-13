@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitteens Hub - Admin Dashboard</title>
+    <!-- Google Fonts: Figtree -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Container for injected sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Content Header -->
+        <header class="content-header">
+            <div class="welcome-box">
+                <span class="welcome-label">Selamat datang kembali,</span>
+                <h2 class="welcome-title">Admin KITTEENS</h2>
+                <p class="welcome-sub">Log in sebagai Admin</p>
+            </div>
+            <div class="notification-container">
+                <button class="notification-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    <span class="notification-badge">2</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Quick Actions Navigation Grid -->
+        <section class="quick-actions-grid">
+            <!-- Action Card 1: Jadwal Pelayanan -->
+            <a href="/jadwal" class="action-card">
+                <div class="action-top">
+                    <div class="icon-wrapper bg-blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+                <h3 class="action-title">Jadwal Pelayanan</h3>
+            </a>
+
+            <!-- Action Card 2: Bank Lagu -->
+            <a href="/bank-lagu" class="action-card">
+                <div class="action-top">
+                    <div class="icon-wrapper bg-teal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18V5l12-2v13"></path>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <circle cx="18" cy="16" r="3"></circle>
+                        </svg>
+                    </div>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+                <h3 class="action-title">Bank Lagu</h3>
+            </a>
+
+            <!-- Action Card 3: Manajemen User -->
+            <a href="#" class="action-card">
+                <div class="action-top">
+                    <div class="icon-wrapper bg-purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+                <h3 class="action-title">Manajemen User</h3>
+            </a>
+        </section>
+
+        <!-- Featured Section: Pelayanan Berikutnya -->
+        <section class="featured-service">
+            <div class="featured-card">
+                <div class="featured-header">
+                    <span class="featured-tag">PELAYANAN BERIKUTNYA</span>
+                    <a href="/jadwal" class="detail-btn">Detail 
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                <h2 class="featured-title">Iman yang Tidak Goyah</h2>
+                <span class="featured-date">Sabtu, 6 Juni 2026</span>
+                <p class="featured-desc">Mengajak jemaat untuk berakar kuat dalam Kristus di tengah tantangan hidup.</p>
+                <div class="featured-footer">
+                    <span class="lecturer-label">Pengkhotbah</span>
+                    <span class="lecturer-name">Ps. Sebastian Marco</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section: Jadwal Mendatang -->
+        <section class="upcoming-schedules">
+            <div class="section-header">
+                <h3 class="section-title">Jadwal Mendatang</h3>
+                <a href="/jadwal" class="see-all-link">Lihat Semua</a>
+            </div>
+            
+            <div class="schedule-grid">
+                <!-- Card 1 -->
+                <div class="schedule-card">
+                    <span class="schedule-card-date">Sabtu, 14 Juni 2026</span>
+                    <h4 class="schedule-card-title">Iman yang Tidak Goyah</h4>
+                    <div class="schedule-card-footer">
+                        <span class="schedule-card-lbl">Pengkhotbah</span>
+                        <span class="schedule-card-name">Ps. Sebastian Marco</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="schedule-card">
+                    <span class="schedule-card-date">Sabtu, 13 Juni 2026</span>
+                    <h4 class="schedule-card-title">Kasih yang Memulihkan</h4>
+                    <div class="schedule-card-footer">
+                        <span class="schedule-card-lbl">Pengkhotbah</span>
+                        <span class="schedule-card-name">Ps. Fernando</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="schedule-card">
+                    <span class="schedule-card-date">Sabtu, 20 Juni 2026</span>
+                    <h4 class="schedule-card-title">Pengharapan di Dalam Tuhan</h4>
+                    <div class="schedule-card-footer">
+                        <span class="schedule-card-lbl">Pengkhotbah</span>
+                        <span class="schedule-card-name">Ps. Jeremy Suwanto</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="js/sidebar.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
