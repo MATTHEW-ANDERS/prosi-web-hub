@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitteens Hub - Jadwal Pelayanan</title>
+    <!-- Google Fonts: Figtree -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/jadwal.css">
+</head>
+
+<body>
+    <!-- Container for injected sidebar -->
+    <div id="sidebar-container"></div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div id="mainJadwalView">
+            <!-- Content Header -->
+            <header class="content-header">
+            <div class="title-box">
+                <h2 class="page-title">Jadwal Pelayanan</h2>
+                <p class="page-subtitle">Kalender Pelayanan KITTEENS</p>
+            </div>
+            <button class="add-btn" id="addJadwalBtn">+ Tambah Jadwal</button>
+        </header>
+
+        <!-- Main Layout: Grid 2 Columns -->
+        <div class="jadwal-layout">
+            <!-- Left Side: Calendar Card -->
+            <div class="calendar-card">
+                <div class="calendar-header">
+                    <button class="cal-nav-btn">&larr;</button>
+                    <span class="cal-month-title">Juni 2026</span>
+                    <button class="cal-nav-btn">&rarr;</button>
+                </div>
+
+                <div class="calendar-grid">
+                    <!-- Weekdays in Indonesian as in screenshot -->
+                    <span class="day-name">MIN</span>
+                    <span class="day-name">SEN</span>
+                    <span class="day-name">SEL</span>
+                    <span class="day-name">RAB</span>
+                    <span class="day-name">KAM</span>
+                    <span class="day-name">JUM</span>
+                    <span class="day-name">SAB</span>
+
+                    <!-- Empty space for June 2026 starting on Monday (Mon=1st) -->
+                    <span class="day-number empty"></span>
+                    <span class="day-number">1</span>
+                    <span class="day-number">2</span>
+                    <span class="day-number">3</span>
+                    <span class="day-number">4</span>
+                    <span class="day-number">5</span>
+                    <!-- June 6 active selected state -->
+                    <span class="day-number active-day">6</span>
+
+                    <span class="day-number">7</span>
+                    <span class="day-number">8</span>
+                    <span class="day-number">9</span>
+                    <span class="day-number">10</span>
+                    <span class="day-number">11</span>
+                    <span class="day-number">12</span>
+                    <!-- June 13 dot state -->
+                    <span class="day-number has-service">13<span class="service-dot"></span></span>
+
+                    <span class="day-number">14</span>
+                    <span class="day-number">15</span>
+                    <span class="day-number">16</span>
+                    <span class="day-number">17</span>
+                    <span class="day-number">18</span>
+                    <span class="day-number">19</span>
+                    <!-- June 20 dot state -->
+                    <span class="day-number has-service">20<span class="service-dot"></span></span>
+
+                    <span class="day-number">21</span>
+                    <span class="day-number">22</span>
+                    <span class="day-number">23</span>
+                    <span class="day-number">24</span>
+                    <span class="day-number">25</span>
+                    <span class="day-number">26</span>
+                    <span class="day-number">27</span>
+
+                    <span class="day-number">28</span>
+                    <span class="day-number">29</span>
+                    <span class="day-number">30</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Service Lists -->
+            <div class="services-list">
+                <!-- Service Item 1 -->
+                <div class="service-item-card">
+                    <div class="service-card-header">
+                        <span class="service-date-tag text-blue">SABTU, 6 JUNI 2026</span>
+                        <svg class="open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Iman yang Tidak Goyah</h3>
+                    <div class="service-card-body">
+                        <div class="body-row">
+                            <span class="body-label">TUJUAN</span>
+                            <p class="body-text">Mengajak jemaat untuk berakar kuat dalam Kristus di tengah tantangan
+                                hidup.</p>
+                        </div>
+                        <div class="body-row">
+                            <span class="body-label">PENGKHOTBAH</span>
+                            <p class="body-text highlight-name">Ps. Sebastian Marco</p>
+                        </div>
+                    </div>
+                    <button class="delete-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                            </path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Service Item 2 -->
+                <div class="service-item-card">
+                    <div class="service-card-header">
+                        <span class="service-date-tag text-blue">SABTU, 13 JUNI 2026</span>
+                        <svg class="open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Kasih yang Memulihkan</h3>
+                    <div class="service-card-body">
+                        <div class="body-row">
+                            <span class="body-label">TUJUAN</span>
+                            <p class="body-text">Mengajak jemaat untuk mengenal dan merasakan Kasih Tuhan yang
+                                memulihkan.</p>
+                        </div>
+                        <div class="body-row">
+                            <span class="body-label">PENGKHOTBAH</span>
+                            <p class="body-text highlight-name">Ps. Fernando</p>
+                        </div>
+                    </div>
+                    <button class="delete-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                            </path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Service Item 3 -->
+                <div class="service-item-card">
+                    <div class="service-card-header">
+                        <span class="service-date-tag text-blue">SABTU, 20 JUNI 2026</span>
+                        <svg class="open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Pengharapan di Dalam Tuhan</h3>
+                    <div class="service-card-body">
+                        <div class="body-row">
+                            <span class="body-label">TUJUAN</span>
+                            <p class="body-text">Mengajak jemaat untuk terus memiliki harapan di dalam Tuhan di tengah
+                                kondisi yang tidak baik.</p>
+                        </div>
+                        <div class="body-row">
+                            <span class="body-label">PENGKHOTBAH</span>
+                            <p class="body-text highlight-name">Ps. Jeremy Suwanto</p>
+                        </div>
+                    </div>
+                    <button class="delete-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                            </path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Form Tambah Jadwal (Hidden by default) -->
+            <div class="jadwal-form-section" id="addJadwalSection" style="display: none; background: #ffffff; border-radius: 20px; padding: 32px; box-shadow: 0 4px 20px rgba(180, 210, 225, 0.25); border: 1px solid rgba(226, 232, 240, 0.8);">
+                <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 24px;">
+                    <button id="cancelJadwalBtn" style="background: none; border: none; cursor: pointer; color: #ef4444; padding: 0;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 24px; height: 24px;">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </button>
+                </div>
+                <form id="formTambahJadwal" style="display: flex; flex-direction: column; gap: 20px;">
+                    <!-- Kategori -->
+                    <div>
+                        <label style="color: #94a3b8; font-size: 13px; margin-bottom: 12px; display: block; font-weight: 600;">Kategori</label>
+                        <div style="display: flex; gap: 12px;">
+                            <label style="flex: 1; text-align: center; border: 1px solid #e2e8f0; padding: 12px; border-radius: 24px; cursor: pointer; background: #0e375a; color: white; font-size: 14px; font-weight: 600; transition: all 0.2s;">
+                                <input type="radio" name="kategori" value="Pelayanan" checked style="display: none;"> Pelayanan
+                            </label>
+                            <label style="flex: 1; text-align: center; border: 1px solid #e2e8f0; padding: 12px; border-radius: 24px; cursor: pointer; color: #475569; font-size: 14px; font-weight: 600; transition: all 0.2s;">
+                                <input type="radio" name="kategori" value="Latihan" style="display: none;"> Latihan
+                            </label>
+                            <label style="flex: 1; text-align: center; border: 1px solid #e2e8f0; padding: 12px; border-radius: 24px; cursor: pointer; color: #475569; font-size: 14px; font-weight: 600; transition: all 0.2s;">
+                                <input type="radio" name="kategori" value="Event" style="display: none;"> Event
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label style="color: #94a3b8; font-size: 13px; margin-bottom: 8px; display: block; font-weight: 600;">Tema Kotbah</label>
+                        <input type="text" id="jadwalTema" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: 'Figtree', sans-serif; color: #0e375a; font-weight: 500;">
+                    </div>
+                    
+                    <div>
+                        <label style="color: #94a3b8; font-size: 13px; margin-bottom: 8px; display: block; font-weight: 600;">Ringkasan / Tujuan</label>
+                        <input type="text" id="jadwalRingkasan" style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: 'Figtree', sans-serif; color: #0e375a; font-weight: 500;">
+                    </div>
+                    
+                    <div>
+                        <label style="color: #94a3b8; font-size: 13px; margin-bottom: 8px; display: block; font-weight: 600;">Pengkotbah</label>
+                        <input type="text" id="jadwalPengkhotbah" style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: 'Figtree', sans-serif; color: #0e375a; font-weight: 500;">
+                    </div>
+                    
+                    <div style="display: flex; gap: 16px;">
+                        <div style="flex: 2;">
+                            <label style="color: #94a3b8; font-size: 13px; margin-bottom: 8px; display: block; font-weight: 600;">Tanggal</label>
+                            <input type="date" id="jadwalTanggal" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: 'Figtree', sans-serif; color: #0e375a; font-weight: 500;">
+                        </div>
+                        <div style="flex: 1;">
+                            <label style="color: #94a3b8; font-size: 13px; margin-bottom: 8px; display: block; font-weight: 600; opacity: 0;">Jam</label>
+                            <input type="time" id="jadwalJam" style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; outline: none; font-family: 'Figtree', sans-serif; color: #0e375a; font-weight: 500;">
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 8px;">
+                        <h4 style="margin: 0 0 16px 0; font-size: 14px; color: #94a3b8; font-weight: 700;">TIM PELAYANAN</h4>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;" id="timPelayananContainer">
+                            <!-- Dropdowns will be generated by JS -->
+                        </div>
+                    </div>
+                    
+                    <button type="submit" style="background: #4ade80; color: white; border: none; padding: 16px; border-radius: 12px; font-weight: 700; cursor: pointer; margin-top: 16px; font-family: 'Figtree', sans-serif; font-size: 15px; transition: background-color 0.2s;">Tambah Jadwal</button>
+                </form>
+            </div>
+        </div>
+        </div> <!-- End of mainJadwalView -->
+
+        <!-- Detail Jadwal View -->
+        <div id="detailJadwalView" style="display: none;">
+            <header class="content-header" style="justify-content: flex-start; gap: 20px;">
+                <button id="backToJadwalBtn" style="background: none; border: none; cursor: pointer; padding: 0;">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#0e375a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+                <div class="title-box">
+                    <h2 class="page-title">Jadwal Pelayanan</h2>
+                    <p class="page-subtitle">Informasi seputar pelayanan minggu ini</p>
+                </div>
+                <div style="margin-left: auto; display: flex; gap: 12px;">
+                    <button style="background: white; border: 1px solid #e2e8f0; border-radius: 20px; padding: 8px 24px; font-weight: 700; font-size: 14px; font-family: 'Figtree'; color: #0e375a; cursor: pointer;">Edit</button>
+                    <button style="background: #ef4444; color: white; border: none; border-radius: 12px; padding: 8px 12px; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            <line x1="10" y1="11" x2="10" y2="17"></line>
+                            <line x1="14" y1="11" x2="14" y2="17"></line>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+                <div class="left-col" style="display: flex; flex-direction: column; gap: 24px;">
+                    <!-- Card Info -->
+                    <div class="service-item-card" style="margin: 0; cursor: default;" id="detailInfoCard">
+                        <!-- Injected by JS -->
+                    </div>
+                    <!-- Card Tim -->
+                    <div class="service-item-card" style="margin: 0; cursor: default;" id="detailTimCard">
+                        <h4 style="margin: 0 0 24px 0; font-size: 15px; color: #0e375a; font-weight: 800; letter-spacing: 0.5px;">TIM PELAYANAN</h4>
+                        <div id="detailTimList" style="display: flex; flex-direction: column; gap: 16px;"></div>
+                    </div>
+                </div>
+                <div class="right-col">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                        <h4 style="margin: 0; font-size: 14px; color: #0e375a; font-weight: 800; letter-spacing: 0.5px;">DAFTAR LAGU</h4>
+                        <button id="showAddLaguModalBtn" style="background: #0e375a; color: white; border: none; border-radius: 12px; padding: 10px 20px; font-weight: 700; font-size: 13px; font-family: 'Figtree'; cursor: pointer; box-shadow: 0 4px 12px rgba(14, 55, 90, 0.15);">+Tambah Lagu</button>
+                    </div>
+                    <div id="detailLaguList" style="display: flex; flex-direction: column; gap: 16px;">
+                        <!-- Songs injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Tambah Lagu -->
+        <div id="addLaguModal" style="display: none; position: fixed; inset: 0; background: rgba(14, 55, 90, 0.6); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(4px);">
+            <div style="background: white; border-radius: 24px; padding: 32px; width: 440px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <h3 style="margin: 0 0 24px 0; color: #0e375a; font-size: 20px; font-weight: 800;">Tambah Lagu ke Jadwal</h3>
+                <form id="formJadwalLagu" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-size: 13px; font-weight: 700; color: #64748b;">Pilih Lagu dari Bank</label>
+                        <select id="modalSelectLagu" required style="width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid #e2e8f0; font-family: 'Figtree'; font-size: 14px; font-weight: 600; color: #0e375a; outline: none;"></select>
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-size: 13px; font-weight: 700; color: #64748b;">Nada Dasar Digunakan</label>
+                        <select id="modalSelectNada" required style="width: 100%; padding: 12px 16px; border-radius: 12px; border: 1px solid #e2e8f0; font-family: 'Figtree'; font-size: 14px; font-weight: 600; color: #0e375a; outline: none;">
+                            <option value="C">C</option><option value="C#">C#</option><option value="D">D</option><option value="D#">D#</option>
+                            <option value="E">E</option><option value="F">F</option><option value="F#">F#</option><option value="G">G</option>
+                            <option value="G#">G#</option><option value="A">A</option><option value="A#">A#</option><option value="B">B</option>
+                        </select>
+                    </div>
+                    <div style="display: flex; gap: 12px; margin-top: 12px;">
+                        <button type="button" id="closeAddLaguModalBtn" style="flex: 1; padding: 14px; border-radius: 12px; border: 1px solid #e2e8f0; background: white; cursor: pointer; font-weight: 700; font-family: 'Figtree'; color: #64748b;">Batal</button>
+                        <button type="submit" style="flex: 1; padding: 14px; border-radius: 12px; border: none; background: #4ade80; color: white; cursor: pointer; font-weight: 700; font-family: 'Figtree'; font-size: 15px;">Simpan Lagu</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Custom JS -->
+    <script src="js/sidebar.js"></script>
+    <script src="js/jadwal.js"></script>
+</body>
+
+</html>

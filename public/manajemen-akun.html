@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitteens Hub - Manajemen Akun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/manajemen-akun.css">
+</head>
+
+<body>
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+        <!-- Header -->
+        <header class="content-header">
+            <div class="title-box">
+                <h2 class="page-title">Manajemen Akun</h2>
+                <p class="page-subtitle" id="accountCount">3 Akun Terdaftar</p>
+            </div>
+        </header>
+
+        <!-- Add Account Form -->
+        <section class="add-account-card">
+            <div class="add-account-title-row">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="20" height="20">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="8.5" cy="7" r="4"></circle>
+                    <line x1="20" y1="8" x2="20" y2="14"></line>
+                    <line x1="23" y1="11" x2="17" y2="11"></line>
+                </svg>
+                <span class="add-account-label">Tambah Akun</span>
+            </div>
+            <div class="add-account-form">
+                <input type="text" id="newName" class="form-input" placeholder="Nama">
+                <input type="email" id="newEmail" class="form-input" placeholder="Email">
+                <div class="select-wrapper role-select-wrap">
+                    <select id="newRole" class="form-select" placeholder="Role">
+                        <option value="Servant">Servant</option>
+                        <option value="Worship Planner">Worship Planner</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Worship Leader">Worship Leader</option>
+                    </select>
+                </div>
+                <button class="add-btn" id="addAccountBtn">Tambah</button>
+            </div>
+        </section>
+
+        <!-- Search -->
+        <div class="search-box-wrapper">
+            <div class="search-box">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="searchAccount" placeholder="Cari Nama / Email">
+            </div>
+        </div>
+
+        <!-- Accounts Table -->
+        <section class="accounts-table-card">
+            <table class="accounts-table">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="accountsTableBody">
+                    <!-- Row 1 -->
+                    <tr data-name="AdminKITTEENS" data-email="admin@kitteens.org">
+                        <td class="td-name">AdminKITTEENS</td>
+                        <td class="td-email">admin@kitteens.org</td>
+                        <td>
+                            <div class="role-select-wrapper">
+                                <select class="role-badge admin-badge">
+                                    <option selected>Admin</option>
+                                    <option>Servant</option>
+                                    <option>Worship Planner</option>
+                                    <option>Worship Leader</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="delete-account-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Row 2 -->
+                    <tr data-name="Yosua Pranata" data-email="yosua@kitteens.org">
+                        <td class="td-name">Yosua Pranata</td>
+                        <td class="td-email">yosua@kitteens.org</td>
+                        <td>
+                            <div class="role-select-wrapper">
+                                <select class="role-badge servant-badge">
+                                    <option>Admin</option>
+                                    <option selected>Servant</option>
+                                    <option>Worship Planner</option>
+                                    <option>Worship Leader</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="delete-account-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Row 3 -->
+                    <tr data-name="Kentaro" data-email="kentaro@kitteens.org">
+                        <td class="td-name">Kentaro</td>
+                        <td class="td-email">kentaro@kitteens.org</td>
+                        <td>
+                            <div class="role-select-wrapper">
+                                <select class="role-badge worship-badge">
+                                    <option>Admin</option>
+                                    <option>Servant</option>
+                                    <option selected>Worship Planner</option>
+                                    <option>Worship Leader</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <button class="delete-account-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="3 6 5 6 21 6"></polyline>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/manajemen-akun.js"></script>
+</body>
+
+</html>

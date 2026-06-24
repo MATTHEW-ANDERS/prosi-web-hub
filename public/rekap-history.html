@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitteens Hub - Rekap History</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/rekap-history.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+        <!-- Header -->
+        <header class="content-header">
+            <div class="title-box">
+                <h2 class="page-title">Rekap History</h2>
+                <p class="page-subtitle">Frekuensi pelayanan tim per bulan untuk evaluasi penjadwalan.</p>
+            </div>
+            <div class="month-nav">
+                <button class="month-btn" id="prevMonthBtn">&larr;</button>
+                <span class="month-label" id="monthLabel">Juni 2026</span>
+                <button class="month-btn" id="nextMonthBtn">&rarr;</button>
+            </div>
+        </header>
+
+        <!-- Summary Stats Cards -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <p class="stat-label">Pelayanan Bulan Ini</p>
+                <p class="stat-value">3</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-label">Servant Bulan Ini</p>
+                <p class="stat-value">21</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-label">Pelayanan lebih dari 2</p>
+                <p class="stat-value">2</p>
+            </div>
+        </section>
+
+        <!-- Alert Banner -->
+        <section class="alert-banner">
+            <div class="alert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+            </div>
+            <div class="alert-content">
+                <h4 class="alert-title">Perlu Diperhatikan</h4>
+                <p class="alert-text">2 servant sudah melayani 3x atau lebih bulan ini. Pertimbangkan untuk mengurangi alokasi mereka di bulan berikutnya.</p>
+                <div class="alert-tags">
+                    <span class="alert-tag">Mikha - 2x</span>
+                    <span class="alert-tag">Priscilla - 2x</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servant List Section -->
+        <section class="servant-list-section">
+            <div class="section-card">
+                <div class="section-title-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                        <polyline points="17 6 23 6 23 12"></polyline>
+                    </svg>
+                    <h3 class="section-title">Daftar Servant (Juni 2026)</h3>
+                </div>
+
+                <!-- Servant Row: Mikha -->
+                <div class="servant-row">
+                    <div class="servant-header">
+                        <span class="servant-name">Mikha</span>
+                        <span class="servant-count highlight">2x</span>
+                    </div>
+                    <div class="servant-bar-track">
+                        <div class="servant-bar" style="width: 100%; background-color: #5ab0cc;"></div>
+                    </div>
+                    <div class="servant-roles">
+                        <span class="role-tag">Singer x2</span>
+                    </div>
+                </div>
+
+                <!-- Servant Row: Priscilla -->
+                <div class="servant-row">
+                    <div class="servant-header">
+                        <span class="servant-name">Priscilla</span>
+                        <span class="servant-count highlight">2x</span>
+                    </div>
+                    <div class="servant-bar-track">
+                        <div class="servant-bar" style="width: 100%; background-color: #5ab0cc;"></div>
+                    </div>
+                    <div class="servant-roles">
+                        <span class="role-tag">Worship Leader x1</span>
+                        <span class="role-tag">Singer x2</span>
+                    </div>
+                </div>
+
+                <!-- Servant Row: Aldo Wijaya -->
+                <div class="servant-row">
+                    <div class="servant-header">
+                        <span class="servant-name">Aldo Wijaya</span>
+                        <span class="servant-count">1x</span>
+                    </div>
+                    <div class="servant-bar-track">
+                        <div class="servant-bar" style="width: 50%; background-color: #0e375a;"></div>
+                    </div>
+                    <div class="servant-roles">
+                        <span class="role-tag">Worship Leader x1</span>
+                    </div>
+                </div>
+
+                <!-- Servant Row: Aldo Wijaya 2 -->
+                <div class="servant-row">
+                    <div class="servant-header">
+                        <span class="servant-name">Aldo Wijaya</span>
+                        <span class="servant-count">1x</span>
+                    </div>
+                    <div class="servant-bar-track">
+                        <div class="servant-bar" style="width: 50%; background-color: #0e375a;"></div>
+                    </div>
+                    <div class="servant-roles">
+                        <!-- No tags in screenshot -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/rekap-history.js"></script>
+</body>
+</html>

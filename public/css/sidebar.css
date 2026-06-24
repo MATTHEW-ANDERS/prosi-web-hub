@@ -1,0 +1,159 @@
+/* Sidebar Container Layout */
+* {
+    font-family: 'Figtree', sans-serif;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+    z-index: 100;
+}
+
+/* Brand Logo Section */
+.sidebar-brand {
+    padding: 0 12px;
+    margin-bottom: 36px;
+}
+
+.sidebar-brand h1 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-brand h1 span {
+    color: #3b82f6; /* Premium blue */
+    font-weight: 600;
+}
+
+/* Sidebar Menu Items */
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+.menu-item.active {
+    background-color: #0e375a; /* Navy background as screenshot */
+    color: #ffffff;
+}
+
+.menu-icon {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    transition: stroke 0.2s;
+}
+
+/* Sidebar Footer Section */
+.sidebar-footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Admin Selector */
+.admin-selector-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.admin-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.admin-select {
+    width: 100%;
+    padding: 8px 12px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    font-size: 9px;
+    color: #64748b;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Logout Button */
+.logout-btn {
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #fee2e2;
+    background-color: #fff;
+    border-radius: 50px;
+    color: #ef4444;
+    font-family: 'Figtree', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.logout-btn:hover {
+    background-color: #fef2f2;
+    border-color: #fca5a5;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.08);
+}
+
+.logout-icon {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+}

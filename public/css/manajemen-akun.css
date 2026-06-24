@@ -1,0 +1,299 @@
+/* Layout & Background */
+body {
+    font-family: 'Figtree', sans-serif;
+    background-color: #edf5f9;
+    min-height: 100vh;
+    display: block;
+}
+
+.main-content {
+    margin-left: 260px;
+    padding: 40px 48px;
+    max-width: 1100px;
+}
+
+/* Header */
+.content-header {
+    margin-bottom: 24px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0e375a;
+}
+
+.page-subtitle {
+    font-size: 13px;
+    font-weight: 500;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+/* Add Account Card */
+.add-account-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 16px rgba(180, 210, 225, 0.2);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    margin-bottom: 20px;
+}
+
+.add-account-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    color: #0e375a;
+}
+
+.add-account-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0e375a;
+}
+
+/* Add Form Row */
+.add-account-form {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.form-input {
+    flex-grow: 1;
+    padding: 10px 16px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #334155;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-input::placeholder {
+    color: #94a3b8;
+}
+
+.form-input:focus {
+    border-color: #3b82f6;
+    background: #fff;
+}
+
+.role-select-wrap {
+    width: 160px;
+    flex-shrink: 0;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px 32px 10px 14px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    font-size: 9px;
+    color: #64748b;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.add-btn {
+    background-color: #0e375a;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 22px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s;
+    box-shadow: 0 3px 10px rgba(14, 55, 90, 0.15);
+}
+
+.add-btn:hover {
+    background-color: #134977;
+}
+
+/* Search Box */
+.search-box-wrapper {
+    margin-bottom: 20px;
+}
+
+.search-box {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    max-width: 320px;
+}
+
+.search-icon {
+    width: 18px;
+    height: 18px;
+    color: #94a3b8;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-family: 'Figtree', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #334155;
+    padding: 11px 0;
+    width: 100%;
+    background: transparent;
+}
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+/* Accounts Table Card */
+.accounts-table-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(180, 210, 225, 0.25);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.accounts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.accounts-table thead tr {
+    background-color: #0e375a;
+}
+
+.accounts-table thead th {
+    padding: 14px 24px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 600;
+    color: #e2f0ff;
+    letter-spacing: 0.3px;
+}
+
+.accounts-table tbody tr {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background-color 0.15s;
+}
+
+.accounts-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.accounts-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.accounts-table tbody td {
+    padding: 16px 24px;
+    vertical-align: middle;
+}
+
+.td-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0e375a;
+}
+
+.td-email {
+    font-size: 13px;
+    font-weight: 500;
+    color: #475569;
+}
+
+/* Role Badge Dropdowns */
+.role-select-wrapper {
+    display: inline-block;
+}
+
+.role-badge {
+    padding: 6px 28px 6px 14px;
+    border-radius: 50px;
+    font-family: 'Figtree', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.admin-badge {
+    background-color: #5ab0cc;
+    color: #ffffff;
+}
+
+.servant-badge {
+    background-color: #53c883;
+    color: #ffffff;
+}
+
+.worship-badge {
+    background-color: #e57754;
+    color: #ffffff;
+}
+
+.guest-badge {
+    background-color: #94a3b8;
+    color: #ffffff;
+}
+
+/* Delete Account Button */
+.delete-account-btn {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.delete-account-btn:hover {
+    background-color: #fef2f2;
+}
+
+.delete-account-btn svg {
+    width: 18px;
+    height: 18px;
+}
